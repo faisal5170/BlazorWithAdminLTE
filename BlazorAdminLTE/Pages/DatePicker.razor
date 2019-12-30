@@ -1,0 +1,53 @@
+﻿@page  "/date-picker"
+
+<div class="container-fluid">
+
+    <p><b>DateTime format</b></p>
+    <p>Full support of <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings?view=netframework-4.8" target="_blank">.NET DateTime formats</a></p>
+    <MatDatePicker @bind-Value="FeaturesDateTime" Format="MM-dd-yy"></MatDatePicker>
+    <MatDatePicker @bind-Value="FeaturesDateTime" Format="MMMM dd, yyyy"></MatDatePicker>
+    <MatDatePicker @bind-Value="FeaturesDateTime" Format="MM/dd/yy H:mm:ss"></MatDatePicker>
+
+
+    <p><b>EnableTime</b></p>
+    <MatDatePicker @bind-Value="FeaturesDateTime" EnableTime="true"></MatDatePicker>
+
+    <p><b>Minimum</b></p>
+    <MatDatePicker @bind-Value="FeaturesDateTime" Minimum="@DateTime.Now.AddDays(-10)"></MatDatePicker>
+
+    <p><b>Maximum</b></p>
+    <MatDatePicker @bind-Value="FeaturesDateTime" Maximum="@DateTime.Now.AddDays(10)"></MatDatePicker>
+
+    <p><b>Minimum and Maximum</b></p>
+    <MatDatePicker @bind-Value="FeaturesDateTime" Minimum="@DateTime.Now.AddDays(-10)" Maximum="@DateTime.Now.AddDays(10)"></MatDatePicker>
+
+    <p><b>EnableSeconds</b></p>
+    <MatDatePicker @bind-Value="FeaturesDateTime" EnableTime="true" EnableSeconds="true"></MatDatePicker>
+
+    <p><b>Enable24hours</b></p>
+    <MatDatePicker @bind-Value="FeaturesDateTime" EnableTime="true" Enable24hours="true"></MatDatePicker>
+
+    <p><b>EnableWeekNumbers</b></p>
+    <MatDatePicker @bind-Value="FeaturesDateTime" EnableWeekNumbers="true"></MatDatePicker>
+
+    <p><b>EnableWeekNumbers</b></p>
+    <MatDatePicker @bind-Value="FeaturesDateTime" DisableMobile="true"></MatDatePicker>
+
+    <p><b>DisableCalendar</b></p>
+    <MatDatePicker @bind-Value="FeaturesDateTime" DisableCalendar="true"></MatDatePicker>
+
+    <p><b>AllowInput</b></p>
+    <MatDatePicker @bind-Value="FeaturesDateTime" AllowInput="false"></MatDatePicker>
+
+    <p><b>Disabled</b></p>
+    <MatDatePicker @bind-Value="FeaturesDateTime" Disabled="true"></MatDatePicker>
+
+    <p><b>ReadOnly</b></p>
+    <MatDatePicker @bind-Value="FeaturesDateTime" ReadOnly="true"></MatDatePicker>
+</div>
+
+@code
+        {
+    DateTime? FeaturesDateTime = DateTime.Now;
+}
+

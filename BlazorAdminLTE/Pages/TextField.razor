@@ -1,0 +1,177 @@
+﻿@page "/text-field"
+
+<div class="container-fluid">
+
+    <p>
+        <MatTextField @bind-Value="@myStringValue" Label="Standard"></MatTextField>
+    </p>
+    <p>
+        <MatTextField @bind-Value="@myStringValue" Dense="true" Label="Dense"></MatTextField>
+    </p>
+    <p>
+        <MatTextField @bind-Value="@myStringValue" Label="Label"></MatTextField>
+    </p>
+
+    <p>
+        <MatTextField @bind-Value="@myIntValue" Label="Int Field"></MatTextField>
+    </p>
+
+    <p>
+        <MatTextField @bind-Value="@myDateTimeNullValue" Label="DateTime? Field"></MatTextField>
+    </p>
+
+    <p>
+        <MatTextField TValue="decimal" Label="decimal Field with TValue"></MatTextField>
+    </p>
+
+    <hr />
+    <h2>Filled With Leading Icon</h2>
+    <p>
+        <MatTextField @bind-Value="@MyString2" Label="Standard" Icon="favorite"></MatTextField>
+    </p>
+    <p>
+        <MatTextField @bind-Value="@MyString2" Dense="true" Label="Dense" Icon="favorite"></MatTextField>
+    </p>
+    <div class="text-field-container">
+        <MatTextField @bind-Value="@MyString2" Label="Label" Icon="favorite"></MatTextField>
+    </div>
+    <hr />
+    <h2>Filled With Trailing Icon</h2>
+    <p>
+        <MatTextField @bind-Value="@MyString3" Label="Standard" Icon="favorite" IconTrailing="true"></MatTextField>
+    </p>
+    <p>
+        <MatTextField @bind-Value="@MyString3" Dense="true" Label="Dense" Icon="favorite" IconTrailing="true"></MatTextField>
+    </p>
+    <div class="text-field-container">
+        <MatTextField @bind-Value="@MyString3" Label="Label" Icon="favorite" IconTrailing="true"></MatTextField>
+    </div>
+    <hr />
+    <h2>Outlined</h2>
+    <p>
+        <MatTextField @bind-Value="@MyString4" Label="Standard" Outlined="true"></MatTextField>
+    </p>
+    <p>
+        <MatTextField @bind-Value="@MyString4" Dense="true" Label="Dense" Outlined="true"></MatTextField>
+    </p>
+    <div class="text-field-container">
+        <MatTextField @bind-Value="@MyString4" Label="Label" Outlined="true"></MatTextField>
+    </div>
+    <hr />
+    <h2>Outlined With Leading Icon</h2>
+    <p>
+        <MatTextField @bind-Value="@MyString5" Label="Standard" Icon="favorite" Outlined="true"></MatTextField>
+    </p>
+    <p>
+        <MatTextField @bind-Value="@MyString5" Dense="true" Label="Dense" Icon="favorite" Outlined="true"></MatTextField>
+    </p>
+    <div class="text-field-container">
+        <MatTextField @bind-Value="@MyString5" Label="Label" Icon="favorite" Outlined="true"></MatTextField>
+    </div>
+    <hr />
+    <h2>Textarea</h2>
+    <p>
+        <MatTextField @bind-Value="@MyString7" Label="Standard" TextArea="true"></MatTextField>
+    </p>
+    <p>
+        <MatTextField @bind-Value="@MyString7" Dense="true" Label="Dense" TextArea="true"></MatTextField>
+    </p>
+    <div class="text-field-container">
+        <MatTextField @bind-Value="@MyString7" Label="Label" TextArea="true"></MatTextField>
+    </div>
+    <hr />
+    <h2>Full Width</h2>
+    <p>
+        <MatTextField @bind-Value="@MyString8" Label="Full Width" FullWidth="true"></MatTextField>
+    </p>
+    <p>
+        <MatTextField @bind-Value="@MyString8" Dense="true" Label="Dense" FullWidth="true"></MatTextField>
+    </p>
+    <p>
+        <MatTextField @bind-Value="@MyString8" Label="Leading Icon" Icon="mail_outline" FullWidth="true" Required="true"></MatTextField>
+    </p>
+    <p>
+        <MatTextField @bind-Value="@MyString8" Label="Trailing Icon - Password" Icon="lock_outline" IconTrailing="true" FullWidth="true" Required="true" Type="password"></MatTextField>
+    </p>
+    <p>
+        <div class="text-field-container">
+            <MatTextField @bind-Value="@MyString8" Label="Label" FullWidth="true"></MatTextField>
+        </div>
+    </p>
+
+</div>
+
+@code {
+
+    string myStringValue;
+    int myIntValue;
+    DateTime? myDateTimeNullValue;
+
+    public string MyString2
+    {
+        get => _myString2;
+        set
+        {
+            _myString2 = value;
+            this.StateHasChanged();
+        }
+    }
+
+    private string _myString2;
+
+    public string MyString3
+    {
+        get => _myString3;
+        set
+        {
+            _myString3 = value;
+            this.StateHasChanged();
+        }
+    }
+
+    private string _myString3;
+    public string MyString4
+    {
+        get => _myString4;
+        set
+        {
+            _myString4 = value;
+            this.StateHasChanged();
+        }
+    }
+
+    private string _myString4;
+    public string MyString5
+    {
+        get => _myString5;
+        set
+        {
+            _myString5 = value;
+            this.StateHasChanged();
+        }
+    }
+
+    private string _myString5;
+    public string MyString7
+    {
+        get => _myString7;
+        set
+        {
+            _myString7 = value;
+            this.StateHasChanged();
+        }
+    }
+
+    private string _myString7;
+    public string MyString8
+    {
+        get => _myString8;
+        set
+        {
+            _myString8 = value;
+            this.StateHasChanged();
+        }
+    }
+
+    private string _myString8;
+}

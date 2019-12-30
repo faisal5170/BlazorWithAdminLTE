@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorAdminLTE", "BlazorAdminLTE\BlazorAdminLTE.csproj", "{176B66F4-F331-42B0-9850-690BE190E1A2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{176B66F4-F331-42B0-9850-690BE190E1A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{176B66F4-F331-42B0-9850-690BE190E1A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{176B66F4-F331-42B0-9850-690BE190E1A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{176B66F4-F331-42B0-9850-690BE190E1A2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2501C770-4D33-4512-B942-1605B6175C5F}
+	EndGlobalSection
+EndGlobal

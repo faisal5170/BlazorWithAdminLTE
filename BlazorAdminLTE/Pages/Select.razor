@@ -1,0 +1,26 @@
+﻿@page  "/select"
+
+    <div class="container-fluid">
+
+        <MatSelect Label="Pick a Food Group" @bind-Value="value1">
+            <MatOptionString></MatOptionString>
+            <MatOptionString Value="grains">Bread, Cereal, Rice, and Pasta</MatOptionString>
+            <MatOptionString Value="vegetables">Vegetables</MatOptionString>
+            <MatOptionString Value="fruit">Fruit</MatOptionString>
+        </MatSelect>
+
+        <span>@value1</span>
+
+        <hr />
+        <MatSelect Label="Pick a Food Group" Outlined="true" TValue="string">
+            <MatOptionString></MatOptionString>
+            <MatOptionString Value="grains">Bread, Cereal, Rice, and Pasta</MatOptionString>
+            <MatOptionString Value="vegetables">Vegetables</MatOptionString>
+            <MatOptionString Value="fruit">Fruit</MatOptionString>
+        </MatSelect>
+
+    </div>
+
+@code {
+    string value1;
+}

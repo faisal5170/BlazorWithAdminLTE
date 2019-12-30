@@ -1,0 +1,52 @@
+﻿@page "/autocomplete"
+    <style>
+        .mat-autocomplete-list-popup {
+            border: 0;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+    </style>
+<div class="container-fluid">
+
+    <MatAutocompleteList Items="@options2" TItem="Car" Label="Select car" CustomStringSelector="@(i => i.Name)" @bind-Value="@value">
+        <ItemTemplate>
+            <div style="display: flex; flex-direction: row; width: 100%;">
+                <div style="flex: 1;">@context.Name</div>
+            </div>
+        </ItemTemplate>
+    </MatAutocompleteList>
+
+    <p>
+        Selected value: @(value?.Name)
+    </p>
+</div>
+
+
+@code
+        {
+
+    public class Car
+    {
+        public string Name { get; set; }
+        public double Price { get; set; }
+
+        public Car(string name, double price)
+        {
+            Name = name;
+            Price = price;
+        }
+    }
+
+    Car value = null;
+
+    Car[] options2 = new[]
+    {
+                new Car("Volkswagen Golf", 10000),
+                new Car("Volkswagen Passat", 11000),
+                new Car("Volkswagen Polo", 12000),
+                new Car("Ford Focus", 13000),
+                new Car("Ford Fiesta", 14000),
+                new Car("Ford Fusion", 15000),
+                new Car("Ford Mondeo", 16000),
+            };
+
+}
